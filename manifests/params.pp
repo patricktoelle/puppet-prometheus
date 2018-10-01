@@ -209,6 +209,7 @@ class prometheus::params {
   case $::architecture {
     'x86_64', 'amd64': { $arch = 'amd64' }
     'i386':            { $arch = '386'   }
+    'armv7l':          { $arch = 'armv7' }
     default:           {
       fail("Unsupported kernel architecture: ${::architecture}")
     }
